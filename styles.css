@@ -248,16 +248,22 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
+    .navbar .bx{
+        display: block;
+    }
+
     .navbar .list {
         display: none;
         flex-direction: column;
         background-color: rgba(0, 170, 99, 0.9);
         width: 100%;
-        padding: 10px 0;
+        padding: 20px 0;
         position: absolute;
-        top: 60px;
+        top: 0;
         right: 0;
+        text-align: top;
+        height: 100vh;
     }
 
     .navbar .list.active {
