@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('./IMAGES/bk2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(0, 170, 99, 0.7);
+    position: relative;
+    z-index: 100;
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+    color: #f4f4f4;
+    font-family: 'Newsreader', serif;
+}
+
+.navbar .bx {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar .list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar .list a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .list a:hover {
+    color: #ffe600;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #02814f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #036c3a;
+}
+
+.flex {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.about-us {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-us h2 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.8;
+}
+
+.map-container {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #7c9473;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.form-container h2 {
+    color: #609952;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: white;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group button {
+    background-color: #609952;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #7c9473;
+}
+
+footer {
+    background-color: #3b3f36;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-logo h1 {
+    font-size: 1.8rem;
+    color: #f4f4ec;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #d8d7d0;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #7c9473;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #d8d7d0;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #7c9473;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.875rem;
+    color: #d8d7d0;
+    border-top: 1px solid #7c9473;
+    padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar .bx {
+        display: block;
+    }
+
+    .navbar .list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 170, 99, 0.9);
+        width: 100%;
+        height: 100vh;
+        padding: 20px 0;
+    }
+
+    .navbar .list.active {
+        display: flex;
+    }
+
+    .about-us,
+    .map-container iframe {
+        width: 90%;
+        height: 400px;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us,
+    .map-container iframe {
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}
