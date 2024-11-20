@@ -8,3 +8,7 @@ menuIcon.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
     navList.classList.remove('active');
 });
+
+function redirectToSignIn() {
+    window.location.href = "signin.html"; 
+}

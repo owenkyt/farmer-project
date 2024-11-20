@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('bk4.webp');
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #02814f;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-family: 'Newsreader', serif;
+}
+
+.navbar .bx {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar .list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar .list a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .list a:hover {
+    color: #ffe600;
+}
+
+.navbar .btn {
+    padding: 10px 20px;
+    background-color: #036c3a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .btn:hover {
+    background-color: #024e29;
+}
+
+/* Header Section */
+.header-section {
+    text-align: center;
+    background-color: #7c9473;
+    padding: 50px 20px;
+    color: white;
+    font-family: 'Newsreader', serif;
+}
+
+.header-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header-section p {
+    font-size: 1.2rem;
+}
+
+/* Featured Articles */
+.featured-articles, .articles-list {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.featured-articles h2, .articles-list h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #036c3a;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.article-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.article-card h3 {
+    font-size: 1.2rem;
+    color: #036c3a;
+    margin: 15px;
+}
+
+.article-card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 15px;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #3b3f36;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-logo h1 {
+    font-size: 1.8rem;
+    color: #f4f4ec;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    color: #d8d7d0;
+    margin-top: 10px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #d8d7d0;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #7c9473;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #d8d7d0;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #7c9473;
+}
+
+.footer-contact p {
+    font-size: 1rem;
+    color: #d8d7d0;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.875rem;
+    color: #d8d7d0;
+    border-top: 1px solid #7c9473;
+    padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar .bx {
+        display: block;
+    }
+
+    .navbar .list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #02814f;
+        width: 100%;
+        height: 100vh;
+        padding: 20px 0;
+    }
+
+    .navbar .list.active {
+        display: flex;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .article-card {
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
