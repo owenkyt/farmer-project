@@ -5,57 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="signin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>User Sign In & Sign Up System</title>
+    <title>MI FARM - User System</title>
 </head>
 <body>
-    <div class="container" id="container">
-        
-        <!-- Sign-Up Form -->
-        <div class="form-container sign-up-container" id="signup">
-            <form action="signup.php" method="POST">
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button type="submit">Sign Up</button>
-            </form>
-        </div>
-        
-        <!-- Sign-In Form -->
-        <div class="form-container sign-in-container">
-            <form action="signin.php" method="POST">
-                <h1>Sign In</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <a href="#" class="frgt">Forgot your password?</a>
-                <button type="submit">Sign In</button>
-            </form>
-        </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1>MI FARM</h1>
+        <span class="material-symbols-outlined bx">menu</span>
+        <ul class="list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./contactus.html">Who We Are</a></li>
+            <li><a href="./article.html">Articles</a></li>
+        </ul>
+    </nav>
 
-        <!-- Overlay Container for Switching Forms -->
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us, please log in with your personal info</p>
-                    <button class="ghost" id="signInOverlay">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your details and start your journey with us</p>
-                    <button class="ghost" id="signUpOverlay" href="#signup">Sign Up</button>
+    <!-- Main Background Section -->
+    <div class="bge">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="./Time lapse.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Sign-In and Sign-Up Form Container -->
+        <div class="container" id="container">
+            <!-- Sign-Up Form -->
+            <div class="form-container sign-up-container">
+                <form action="signup.php" method="POST">
+                    <h1>Create Account</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+            </div>
+
+            <!-- Sign-In Form -->
+            <div class="form-container sign-in-container">
+                <form action="signin.php" method="POST">
+                    <h1>Sign In</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your account</span>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <a href="#" class="frgt">Forgot your password?</a>
+                    <button type="submit" class="btn">Sign In</button>
+                </form>
+            </div>
+
+            <!-- Overlay Container -->
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>To keep connected with us, please log in with your personal info</p>
+                        <button class="ghost" id="signInOverlay">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your details and start your journey with us</p>
+                        <button class="ghost" id="signUpOverlay">Sign Up</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,4 +97,3 @@
     </script>
 </body>
 </html>
-

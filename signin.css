@@ -3,9 +3,69 @@
     outline: none;
 }
 
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgb(102, 207, 125, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-family: 'Newsreader', serif;
+}
+
+.navbar .bx {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar .list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar .list a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .list a:hover {
+    color: #ffe600;
+}
+
+.navbar .btn {
+    padding: 10px 20px;
+    background-color: #036c3a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .btn:hover {
+    background-color: #024e29;
+}
+
 body {
     background: #f6f5f7;
-    display: flex;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
@@ -13,9 +73,22 @@ body {
     margin: 0;
 }
 
-h1 {
-    font-weight: bold;
-    margin: 0;
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures the video stays in the background */
+}
+
+.bge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
 }
 
 p {
@@ -42,7 +115,7 @@ a:hover{
 
 button {
     border-radius: 20px;
-    border: 1px solid #FF4B2B;
+    border: 1px solid #e6e6e6;
     background-color: #FF4B2B;
     color: #ffffff;
     font-size: 12px;
@@ -64,6 +137,10 @@ button:focus {
 button.ghost {
     background-color: transparent;
     border-color: #ffffff;
+}
+
+.btn{
+    background-color: #3ae957de;
 }
 
 form {
@@ -146,7 +223,7 @@ input {
 } 
 
 .overlay {
-    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    background: linear-gradient(to right, #3ae957de, #1aa12c);
     color: #ffffff;
     position: relative;
     left: -100%;
